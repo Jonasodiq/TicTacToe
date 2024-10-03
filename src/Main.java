@@ -6,3 +6,26 @@ public class Main {
 
     }
 }
+
+/*TODO Pseudokod
+
+   # Player
+    - name
+    - symbol
+    - wins
+    + getName()
+    + getSymbol()
+    + addWins()
+    + getWins()
+
+   # GameBoard
+    - board []
+    - p1
+    - p2
+    - sc
+    + startGame()
+    + printBoard()
+
+   # Main
+
+ */
