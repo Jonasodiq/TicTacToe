@@ -4,7 +4,7 @@ public class Player {
     int wins;
 
     // Const
-    public Player(String name, String symbol, int wins) {
+    public Player(String name, String symbol) {
         this.name = name;
         this.symbol = symbol;
         this.wins = 0;
