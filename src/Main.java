@@ -1,3 +1,4 @@
+// 2 oct 2024 Jonas N. Individuell Uppgift-TicTacToe
 import java.util.Scanner;
 
 public class Main {
@@ -30,7 +31,7 @@ public class Main {
     - p2
     - sc
     + startGame()
-    + printBoard()
+    + showBoard()
 
    # Main
 
