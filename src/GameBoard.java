@@ -25,6 +25,14 @@ public class GameBoard {
         System.out.println();
     }
 
+    // Metod resetBoard
+    public void resetBoard() { // Lägg till nummer från 1 till 9
+        for (int i = 0; i < 9; i++) {
+            board[i] = String.valueOf(i + 1);
+        }
+    }
+
+
 
 }
 
