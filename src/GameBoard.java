@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class GameBoard {
@@ -10,14 +11,15 @@ public class GameBoard {
     public GameBoard(Player p1, Player p2) {
         this.p1 = p1;
         this.p2 = p2;
-        printBoard(); // Temp
+        resetBoard(); // Temp
+        showBoard(); // Temp
     }
 
-    // Metod
-    private void printBoard() {
-        System.out.println("\nCurrent game board");
+    // Metod show Board
+    private void showBoard() {
+        System.out.println("\n  Current\n Game board");
         for (int i = 0; i < 9; i += 3) {
-            System.out.println(" 1 | 2 | 3");
+            System.out.println(" " + board[i] + " | " + board[i + 1] + " | " + board[i + 2]);
             if (i < 6) { // Bara 2 rad
                 System.out.println("---+---+---");
             }
@@ -36,7 +38,6 @@ public class GameBoard {
 
 }
 
-
 /*TODO Pseudokod
 
    # GameBoard
@@ -45,5 +46,6 @@ public class GameBoard {
     - p2
     - sc
     + startGame()
-    + printBoard()
+    + showBoard()
+    + resetBoard()
  */
