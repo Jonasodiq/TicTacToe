@@ -15,9 +15,16 @@ public class GameBoard {
         showBoard(); // Temp
     }
 
+    // Metod resetBoard link-> https://www.w3schools.com/java/ref_string_valueof.asp
+    public void resetBoard() { // Lägg till nummer från 1 till 9
+        for (int i = 0; i < 9; i++) {
+            board[i] = String.valueOf(i + 1);
+        }
+    }
+
     // Metod show Board
     private void showBoard() {
-        System.out.println("\n  Current\n Game board");
+        System.out.println("\n Game board");
         for (int i = 0; i < 9; i += 3) {
             System.out.println(" " + board[i] + " | " + board[i + 1] + " | " + board[i + 2]);
             if (i < 6) { // Bara 2 rad
@@ -27,12 +34,6 @@ public class GameBoard {
         System.out.println();
     }
 
-    // Metod resetBoard
-    public void resetBoard() { // Lägg till nummer från 1 till 9
-        for (int i = 0; i < 9; i++) {
-            board[i] = String.valueOf(i + 1);
-        }
-    }
 
 
 
