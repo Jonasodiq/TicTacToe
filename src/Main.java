@@ -20,23 +20,9 @@ public class Main {
 
 /*TODO Pseudokod
 
-   # Player
-    - name
-    - symbol
-    - wins
-    + getName()
-    + getSymbol()
-    + addWins()
-    + getWins()
-
-   # GameBoard
-    - board []
-    - p1
-    - p2
-    - sc
-    + startGame()
-    + showBoard()
-
    # Main
-
+    - sc
+    - ask for name p1, p2
+    - create p1, p2 and save with name and symbol
+    - create new game and run
  */
