@@ -11,8 +11,17 @@ public class GameBoard {
     public GameBoard(Player p1, Player p2) {
         this.p1 = p1;
         this.p2 = p2;
-        resetBoard(); // Temp
+        resetBoard();
+    }
+
+    // Metod
+    public void startGame() {
+        System.out.println("Player 1: " + p1.getName() + " " + p1.getSymbol());
+        System.out.println("Player 2: " + p2.getName() + " " + p2.getSymbol());
+        System.out.println("Let the game begin! ⚔️");
+
         showBoard(); // Temp
+
     }
 
     // Metod resetBoard link-> https://www.w3schools.com/java/ref_string_valueof.asp
@@ -31,7 +40,6 @@ public class GameBoard {
                 System.out.println("---+---+---");
             }
         }
-        System.out.println();
     }
 
 
