@@ -6,11 +6,15 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        Player p1 = new Player("Per", "X");
-        Player p2 = new Player("Bosse", "O");
+        System.out.println("\nEnter the name of Player 1 (X):");
+        Player p1 = new Player(sc.nextLine(), "(X)");
+
+        System.out.println("\nEnter the name of Player 2 (O):");
+        Player p2 = new Player(sc.nextLine(), "(O)");
+
         GameBoard game = new GameBoard(p1, p2);
 
-
+        game.startGame();
     }
 }
 
