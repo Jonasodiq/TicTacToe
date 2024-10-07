@@ -79,6 +79,20 @@ public class GameBoard {
         currentPlayer = currentPlayer == p1 ? p2 : p1;
     }
 
+     /* TODO checkWinner */
+    /* link-> https://www.w3schools.com/java/java_arrays_multi.asp
+       link-> https://www.geeksforgeeks.org/multidimensional-arrays-in-java/ */
+    public String checkWinner() {
+        String[][] winConditions = {
+            {board[0], board[1], board[2]},
+            {board[3], board[4], board[5]},
+            {board[6], board[7], board[8]},
+            {board[0], board[3], board[6]},
+            {board[1], board[4], board[7]},
+            {board[2], board[5], board[8]},
+            {board[0], board[4], board[8]},
+            {board[2], board[4], board[6]}
+        };
 
 
 }
