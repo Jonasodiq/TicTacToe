@@ -42,8 +42,22 @@ public class GameBoard {
             }
         }
 
-    // Reset the game board link-> https://www.w3schools.com/java/ref_string_valueof.asp
-    public void resetBoard() { // Lägg till nummer från 1 till 9
+        if (winner.equals("draw")) {
+            System.out.println("It's a draw! 🤝");
+        } else {
+            Player winningPlayer = winner.equals(p1.getSymbol()) ? p1 : p2;
+            System.out.println("Congratulations! 🎉 " + winningPlayer.getName() + " has won! 🏆");
+            winningPlayer.addScore();
+        }
+
+        // Display the total wins of both players
+        System.out.println(p1.getName() + "'s score: " + p1.getScore());
+        System.out.println(p2.getName() + "'s score: " + p2.getScore());
+    }
+
+     /* TODO resetBoard */
+    // Reset the game board / link-> https://www.w3schools.com/java/ref_string_valueof.asp
+    public void resetBoard() { // Add numbers from 1 to 9
         for (int i = 0; i < 9; i++) {
             board[i] = String.valueOf(i + 1);
         }
