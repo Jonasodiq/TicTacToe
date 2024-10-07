@@ -22,13 +22,25 @@ public class GameBoard {
         System.out.println("Player 2: " + p2.getName() + " " + p2.getSymbol());
         System.out.println("Let the game begin! ⚔️");
 
-        boolean winner = false; // Temp
-        if (!winner) {
-            switchPlayer();
-            showBoard(); // Temp
-            System.out.println("Player 1: " + currentPlayer.getName() + " " + currentPlayer.getSymbol());
+        String winner = null;
+        showBoard();
+        while (winner == null) {
+            System.out.println(currentPlayer.getName() + "'s turn " + currentPlayer.getSymbol() + ". Choose a number 😊:");
+
+            int numInput = getUserInput();
+            if (numInput == -1) continue; // Handle invalid input - Hantera ogiltig inmatning
+
+            if (board[numInput - 1].equals(String.valueOf(numInput))) { // check if it is available?
+                board[numInput - 1] = currentPlayer.getSymbol(); // Place current player's symbol
+                showBoard(); // Print updated game plan
+                winner = checkWinner();
+                if (winner == null) {
+                switchPlayer(); // Switch turn after each valid move - Byt tur efter varje giltigt drag
+                }
+            } else {
+                System.out.println("This spot is already taken. Please choose another! ⚠️");
+            }
         }
-    }
 
     // Reset the game board link-> https://www.w3schools.com/java/ref_string_valueof.asp
     public void resetBoard() { // Lägg till nummer från 1 till 9
