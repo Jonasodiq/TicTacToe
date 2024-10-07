@@ -8,7 +8,7 @@ public class GameBoard {
     private Player currentPlayer;
     private final Scanner in = new Scanner(System.in);
 
-    // Const
+    /* TODO Const GameBoard */
     public GameBoard(Player p1, Player p2) {
         this.p1 = p1;
         this.p2 = p2;
@@ -16,7 +16,7 @@ public class GameBoard {
         resetBoard();
     }
 
-    // Metod start the game
+    /* TODO startGame */
     public void startGame() {
         System.out.println("Player 1: " + p1.getName() + " " + p1.getSymbol());
         System.out.println("Player 2: " + p2.getName() + " " + p2.getSymbol());
@@ -63,7 +63,7 @@ public class GameBoard {
         }
     }
 
-    // Method to print the game board
+     /* TODO showBoard */ // Method to print the game board
     private void showBoard() {
         System.out.println("\n\t\tTic-Tac-Toe");
         for (int i = 0; i < 9; i += 3) {
@@ -74,7 +74,7 @@ public class GameBoard {
         }
     }
 
-    // Method to switch turns between players
+     /* TODO switchPlayer */// Method to switch turns between players */
     public void switchPlayer() {
         currentPlayer = currentPlayer == p1 ? p2 : p1;
     }
@@ -125,7 +125,7 @@ public class GameBoard {
     }
 }
 
-/*TODO Pseudokod
+    /*TODO
 
    # GameBoard
     - board []
@@ -137,4 +137,6 @@ public class GameBoard {
     + showBoard()
     + resetBoard()
     + switchPlayer()
+    + checkWinner()
+    + getUserInput()
  */
