@@ -27,14 +27,14 @@ public class Player {
     }
 }
 
-/*TODO Pseudokod
+/*TODO
 
    # Player
     - name
     - symbol
-    - wins
+    - score
     + getName()
     + getSymbol()
-    + addWins()
-    + getWins()
+    + getScore()
+    + addScore()
  */
