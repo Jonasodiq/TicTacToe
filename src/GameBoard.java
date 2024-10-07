@@ -100,6 +100,29 @@ public class GameBoard {
             }
         }
 
+        /* link-> https://www.w3schools.com/java/java_lambda.asp
+           link-> https://www.w3schools.com/java/ref_string_matches.asp */
+        if (Arrays.stream(board).noneMatch(s -> s.matches("\\d"))) { // match between 0 and 9
+            return "draw"; // oavgjort
+        }
+        return null;
+    }
+
+    /* TODO getUserInput */
+    public int getUserInput() {
+        try {
+            int numInput = in.nextInt();
+            if (numInput > 0 && numInput <= 9) {
+                return numInput;
+            } else {
+                System.out.println("Invalid input! Please enter a number between 1 and 9 🔢:");
+            }
+        } catch (InputMismatchException e) { // link-> https://www.w3schools.com/java/java_try_catch.asp
+            System.out.println("Invalid input! Please enter a valid number 🔢:");
+            in.next(); // Clear invalid input
+        }
+        return -1;
+    }
 }
 
 /*TODO Pseudokod
