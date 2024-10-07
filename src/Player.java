@@ -1,13 +1,12 @@
 public class Player {
-    String name;
-    String symbol;
-    int wins;
+    private final String name;
+    private final String symbol;
+    private int score = 0;
 
     // Const
     public Player(String name, String symbol) {
         this.name = name;
         this.symbol = symbol;
-        this.wins = 0;
     }
 
     // Getters
@@ -19,8 +18,12 @@ public class Player {
         return symbol;
     }
 
-    public int getWins() {
-        return wins;
+    public int getScore() {
+        return score;
+    }
+
+    public void addScore() {
+        score++;
     }
 }
 
