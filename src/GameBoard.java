@@ -94,6 +94,11 @@ public class GameBoard {
             {board[2], board[4], board[6]}
         };
 
+        for (String[] condition : winConditions) {
+            if (condition[0].equals(condition[1]) && condition[1].equals(condition[2])) {
+                return condition[0]; // Return the winner
+            }
+        }
 
 }
 
