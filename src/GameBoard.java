@@ -2,11 +2,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class GameBoard {
-    String[] board = new String[9];
-    Player p1;
-    Player p2;
-    Player currentPlayer;
-    Scanner input = new Scanner(System.in);
+    private final String[] board = new String[9];
+    private final Player p1;
+    private final Player p2;
+    private Player currentPlayer;
+    private final Scanner in = new Scanner(System.in);
 
     // Const
     public GameBoard(Player p1, Player p2) {
