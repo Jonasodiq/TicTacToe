@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GameBoard {
@@ -68,10 +69,11 @@ public class GameBoard {
         System.out.println("\n\t\tTic-Tac-Toe");
         for (int i = 0; i < 9; i += 3) {
             System.out.println("\t\t" + board[i] + " | " + board[i + 1] + " | " + board[i + 2]);
-            if (i < 6) { // Bara 2 rad
+            if (i < 6) { // Only 2 rows
                 System.out.println("\t\t-----------");
             }
         }
+        System.out.println();
     }
 
      /* TODO switchPlayer */// Method to switch turns between players */
