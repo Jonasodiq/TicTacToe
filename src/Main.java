@@ -14,7 +14,17 @@ public class Main {
 
         GameBoard game = new GameBoard(p1, p2);
 
-        game.startGame();
+        boolean playAgain = true;
+        while (playAgain) {
+            game.startGame();
+            System.out.println("Would you like to play again? (y/n): \uD83D\uDD04");
+            String response = sc.nextLine().toLowerCase();
+            playAgain = response.equals("y"); // https://www.w3schools.com/java/ref_string_equals.asp
+            if (playAgain) {
+                game = new GameBoard(p1, p2); // Start a new game
+            }
+        }
+        sc.close();
     }
 }
 
