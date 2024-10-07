@@ -6,11 +6,11 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("\nEnter the name of Player 1 (X):");
-        Player p1 = new Player(sc.nextLine(), "(X)");
+        System.out.println("\nEnter the name of Player 1 ❎:");
+        Player p1 = new Player(sc.nextLine(), "❎");
 
-        System.out.println("\nEnter the name of Player 2 (O):");
-        Player p2 = new Player(sc.nextLine(), "(O)");
+        System.out.println("\nEnter the name of Player 2 ⭕:");
+        Player p2 = new Player(sc.nextLine(), "⭕");
 
         GameBoard game = new GameBoard(p1, p2);
 
@@ -28,11 +28,16 @@ public class Main {
     }
 }
 
-/*TODO Pseudokod
+/*TODO
 
    # Main
     - sc
     - ask for name p1, p2
     - create p1, p2 and save with name and symbol
-    - create new game and run
+    - create new game
+    - playAgain = true
+    - while
+    - start game
+    - ask the user if he wants to play again
+    - if yes play new game
  */
